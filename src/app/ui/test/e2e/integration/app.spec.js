@@ -82,14 +82,14 @@ describe('test the basic functionality', function() {
       .should('have.length', 2)
 
     cy.get('#listTodo>li')
-      .eq(0)
-      .find('input')
-      .should('have.value', 'hello world')
-
-    cy.get('#listTodo>li')
       .eq(1)
       .find('input')
       .should('have.value', 'hello universe')
+
+    cy.get('#listTodo>li')
+      .eq(0)
+      .find('input')
+      .should('have.value', 'hello world')
   })
 
   it('edit the 2nd note', function() {
